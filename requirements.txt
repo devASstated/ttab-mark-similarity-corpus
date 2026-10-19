@@ -1,0 +1,7 @@
+jellyfish
+pandas
+requests
+pypdf
+rapidfuzz
+pyarrow
+fonttools
