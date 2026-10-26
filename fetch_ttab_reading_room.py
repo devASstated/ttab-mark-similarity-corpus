@@ -64,6 +64,13 @@ def passes_decision_filter(
             and "sustain" not in decision
         )
 
+    if decision_filter == "exa-refusal-reversed":
+        return (
+            case_type == "EXA"
+            and "revers" in decision
+            and "affirm" not in decision
+        )
+
     raise ValueError(
         f"Unknown decision filter: {decision_filter}"
     )
@@ -328,6 +335,7 @@ def main():
         choices=[
             "all",
             "opposition-dismissed",
+            "exa-refusal-reversed",
         ],
         default="all",
         help=(
